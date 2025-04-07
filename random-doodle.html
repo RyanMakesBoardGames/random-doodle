@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Refreshable Image</title>
+  <style>
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+    img {
+      display: block;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <img id="doodle" src="https://doodleipsum.com/500/flat?rand=1" alt="Doodle Image" />
+  <button onclick="refreshImage()">Refresh</button>
+
+  <script>
+    function refreshImage() {
+      const img = document.getElementById("doodle");
+      img.src = "https://doodleipsum.com/500/flat?rand=" + new Date().getTime();
+    }
+  </script>
+</body>
+</html>
